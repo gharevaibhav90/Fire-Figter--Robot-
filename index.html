@@ -1,16 +1,24 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080b12">
+
 <title>Fire Fighting Robot | Group 3</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{--bg:#080b12;--panel:#111722;--orange:#ff652e;--white:#f4f5f7;--muted:#9ba7b8;--border:rgba(255,255,255,.09)}
+:root{
+--bg:#080b12;
+--panel:#111722;
+--orange:#ff652e;
+--white:#f4f5f7;
+--muted:#9ba7b8;
+--border:rgba(255,255,255,.09);
+}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{background:var(--bg);color:var(--white);font-family:Poppins,sans-serif}
@@ -91,7 +99,12 @@ footer{background:#060910;border-top:1px solid var(--border);padding:35px 0;text
 footer p{color:var(--muted);font-size:12px}
 .reveal{opacity:0;transform:translateY(20px);transition:.7s}
 .reveal.show{opacity:1;transform:translateY(0)}
-@media(max-width:900px){.hero-visual{width:60%;right:-10%;opacity:.2}.grid{grid-template-columns:repeat(2,1fr)}.circuit-legend{grid-template-columns:repeat(2,1fr)}}
+
+@media(max-width:900px){
+.hero-visual{width:60%;right:-10%;opacity:.2}
+.grid{grid-template-columns:repeat(2,1fr)}
+.circuit-legend{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:650px){
 .menu-btn{display:block}
 .nav-links{display:none;position:absolute;top:76px;left:0;width:100%;background:#0d121c;padding:20px;flex-direction:column}
@@ -107,6 +120,7 @@ footer p{color:var(--muted);font-size:12px}
 @media(max-width:400px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
+
 <body>
 
 <header>
@@ -133,7 +147,11 @@ footer p{color:var(--muted);font-size:12px}
 <div class="hero-content">
 <div class="eyebrow">ENGINEERING PROJECT • GROUP NO. 03</div>
 <h1>FIRE<br><span>FIGHTING</span><br>ROBOT</h1>
-<p class="hero-desc">An Arduino-based robotic prototype designed to detect flame signals, stop its movement and activate a servo-directed water pump. Exploring automation for fire response through robotics.</p>
+<p class="hero-desc">
+An Arduino-based robotic prototype designed to detect flame signals,
+stop its movement and activate a servo-directed water pump.
+Exploring automation for fire response through robotics.
+</p>
 <div class="hero-buttons">
 <a href="#about" class="btn btn-primary">Explore Project ↗</a>
 <a href="#team" class="btn btn-outline">Meet Our Team</a>
@@ -145,7 +163,9 @@ footer p{color:var(--muted);font-size:12px}
 </div>
 </div>
 </div>
-<div class="hero-visual"><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="Robot"></div>
+<div class="hero-visual">
+<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="Robot">
+</div>
 </section>
 
 <section class="section" id="about">
@@ -161,7 +181,9 @@ footer p{color:var(--muted);font-size:12px}
 <div class="feature"><b>Automation</b><small>Response</small></div>
 </div>
 </div>
-<div class="about-visual"><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=700" alt="Robotics"></div>
+<div class="about-visual">
+<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=700" alt="Robotics">
+</div>
 </div>
 </section>
 
@@ -172,7 +194,11 @@ footer p{color:var(--muted);font-size:12px}
 <h2>PROBLEM <span class="orange">STATEMENT</span></h2>
 <p>Understanding the need for an automated fire-response prototype.</p>
 </div>
-<div class="card"><div class="card-icon">🔥</div><h3>The Challenge</h3><p>Manual fire response can involve risk and delays. This project explores a small robotic prototype that detects flame signals and demonstrates an automated response using a water pump. It is an educational model, not a certified firefighting device.</p></div>
+<div class="card">
+<div class="card-icon">🔥</div>
+<h3>The Challenge</h3>
+<p>Manual fire response can involve risk and delays. This project explores a small robotic prototype that detects flame signals and demonstrates an automated response using a water pump. It is an educational model, not a certified firefighting device.</p>
+</div>
 </div>
 </section>
 
@@ -217,7 +243,10 @@ footer p{color:var(--muted);font-size:12px}
 
 <section class="section" id="software">
 <div class="container reveal">
-<div class="section-heading"><div class="eyebrow">05 / SOFTWARE</div><h2>SOFTWARE <span class="orange">REQUIREMENTS</span></h2></div>
+<div class="section-heading">
+<div class="eyebrow">05 / SOFTWARE</div>
+<h2>SOFTWARE <span class="orange">REQUIREMENTS</span></h2>
+</div>
 <div class="grid">
 <div class="card"><div class="card-icon">💻</div><h3>Arduino IDE</h3><p>Used to write, compile and upload the program to Arduino Uno.</p></div>
 <div class="card"><div class="card-icon">📐</div><h3>SOLIDWORKS</h3><p>Used for mechanical design and 3D modelling of robot parts.</p></div>
@@ -251,9 +280,20 @@ footer p{color:var(--muted);font-size:12px}
 <h2>BLOCK <span class="orange">DIAGRAM</span></h2>
 <p>Conceptual signal flow of the robot.</p>
 </div>
-<div class="flow"><div class="flow-box">Flame Sensors</div><span class="flow-arrow">→</span><div class="flow-box">Arduino Uno</div><span class="flow-arrow">→</span><div class="flow-box">Control Outputs</div></div>
-<div class="flow"><div class="flow-box">L298N Driver</div><span class="flow-arrow">→</span><div class="flow-box">DC Motors</div></div>
-<div class="flow"><div class="flow-box">Servo Motor</div><span class="flow-arrow">+</span><div class="flow-box">Pump Driver</div><span class="flow-arrow">→</span><div class="flow-box">Water Pump</div></div>
+<div class="flow">
+<div class="flow-box">Flame Sensors</div><span class="flow-arrow">→</span>
+<div class="flow-box">Arduino Uno</div><span class="flow-arrow">→</span>
+<div class="flow-box">Control Outputs</div>
+</div>
+<div class="flow">
+<div class="flow-box">L298N Driver</div><span class="flow-arrow">→</span>
+<div class="flow-box">DC Motors</div>
+</div>
+<div class="flow">
+<div class="flow-box">Servo Motor</div><span class="flow-arrow">+</span>
+<div class="flow-box">Pump Driver</div><span class="flow-arrow">→</span>
+<div class="flow-box">Water Pump</div>
+</div>
 </div>
 </section>
 
@@ -264,15 +304,17 @@ footer p{color:var(--muted);font-size:12px}
 <h2>ELECTRONIC <span class="orange">CIRCUIT DIAGRAM</span></h2>
 <p>Functional connection overview of the Fire Fighting Robot.</p>
 </div>
+
 <div class="circuit-panel">
 <svg class="circuit-svg" viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+
 <rect x="320" y="210" width="260" height="230" rx="15" fill="#172131" stroke="#ff652e" stroke-width="3"/>
-<text x="450" y="250" fill="#ff652e" font-size="24" text-anchor="middle">ARDUINO UNO</text>
+<text x="450" y="250" fill="#ff652e" font-size="24" text-anchor="middle" font-weight="bold">ARDUINO UNO</text>
 <text x="450" y="285" fill="white" font-size="16" text-anchor="middle">Main Controller</text>
 <text x="450" y="320" fill="#9ba7b8" font-size="14" text-anchor="middle">A0 - Left Flame Sensor</text>
 <text x="450" y="345" fill="#9ba7b8" font-size="14" text-anchor="middle">A1 - Right Flame Sensor</text>
 <text x="450" y="370" fill="#9ba7b8" font-size="14" text-anchor="middle">D2-D5 - Motor Inputs</text>
-<text x="450" y="395" fill="#9ba7b8" font-size="14" text-anchor="middle">D6 Servo | D7 Pump Control</text>
+<text x="450" y="395" fill="#9ba7b8" font-size="14" text-anchor="middle">D6 - Servo | D7 - Pump Control</text>
 
 <rect x="20" y="40" width="230" height="120" rx="12" fill="#171f2d" stroke="#ff652e" stroke-width="2"/>
 <text x="135" y="75" fill="#ff652e" font-size="18" text-anchor="middle">FLAME SENSORS</text>
@@ -305,7 +347,16 @@ footer p{color:var(--muted);font-size:12px}
 <path d="M580 390 H610 V490 H650"/>
 <path d="M250 490 H285 V420 H320"/>
 </g>
-<text x="450" y="610" fill="#9ba7b8" font-size="13" text-anchor="middle">Conceptual connection diagram - verify actual wiring before powering.</text>
+
+<g fill="#ff652e" font-size="13">
+<text x="270" y="85">Sensor Signals</text>
+<text x="590" y="85">Motor Control</text>
+<text x="595" y="285">D6</text>
+<text x="590" y="475">D7</text>
+<text x="260" y="475">Power</text>
+</g>
+
+<text x="450" y="610" fill="#9ba7b8" font-size="13" text-anchor="middle">Conceptual connection diagram - verify actual wiring before powering the circuit.</text>
 </svg>
 </div>
 
@@ -314,5 +365,177 @@ footer p{color:var(--muted);font-size:12px}
 <div class="legend-item"><h3>Motor Driver</h3><p>L298N control pins IN1-IN4 connect to D2-D5. ENA and ENB connect to D9 and D10.</p></div>
 <div class="legend-item"><h3>Servo Motor</h3><p>Servo signal connects to D6. Use an appropriate power supply and common ground.</p></div>
 <div class="legend-item"><h3>Water Pump</h3><p>D7 is a control signal only. A suitable external switching driver is required.</p></div>
-<div class="legend-item"><h3>Power Supply</h3><p>Use suitable regulated supplies for Arduino, motors and other components.</p></div>
-<div class="legend-item"><h3>Common Ground</h3><p>Connect circuit grounds appropriatel
+<div class="legend-item"><h3>Power Supply</h3><p>Use suitable regulated supplies for the Arduino, motors and other components.</p></div>
+<div class="legend-item"><h3>Common Ground</h3><p>Connect circuit grounds appropriately so control signals have a common reference.</p></div>
+</div>
+
+<div class="circuit-note">
+<strong>Important:</strong> This is a conceptual circuit diagram, not a verified wiring schematic. Never connect a water pump directly to an Arduino I/O pin. Use a correctly rated driver circuit and suitable external supply.
+</div>
+</div>
+</section>
+
+<section class="section" id="code">
+<div class="container reveal">
+<div class="section-heading">
+<div class="eyebrow">09 / PROGRAMMING</div>
+<h2>ARDUINO <span class="orange">CODE</span></h2>
+<p>Pin configuration used in the project.</p>
+</div>
+<div class="code-window">
+<div class="code-top">
+<span>🔥 FIRE FIGHTING ROBOT</span>
+<button class="copy-btn" onclick="copyCode()">Copy Code</button>
+</div>
+<pre id="arduinoCode">/*
+ FIRE FIGHTING ROBOT
+ Group No. 03
+*/
+
+#define LEFT_FLAME A0
+#define RIGHT_FLAME A1
+
+#define IN1 2
+#define IN2 3
+#define IN3 4
+#define IN4 5
+
+#define ENA 9
+#define ENB 10
+
+#define SERVO_PIN 6
+#define PUMP_PIN 7
+
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(LEFT_FLAME, INPUT);
+  pinMode(RIGHT_FLAME, INPUT);
+
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+
+  pinMode(ENA, OUTPUT);
+  pinMode(ENB, OUTPUT);
+
+  pinMode(PUMP_PIN, OUTPUT);
+
+  digitalWrite(PUMP_PIN, LOW);
+}
+
+void loop() {
+  int leftValue = digitalRead(LEFT_FLAME);
+  int rightValue = digitalRead(RIGHT_FLAME);
+
+  Serial.print("Left: ");
+  Serial.print(leftValue);
+  Serial.print(" Right: ");
+  Serial.println(rightValue);
+
+  // Example for active LOW flame sensors
+  if (leftValue == LOW || rightValue == LOW) {
+    stopMotors();
+    // Servo and pump response must be
+    // implemented with suitable hardware drivers.
+  } else {
+    moveForward();
+  }
+
+  delay(100);
+}
+
+void moveForward() {
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+
+  analogWrite(ENA, 180);
+  analogWrite(ENB, 180);
+}
+
+void stopMotors() {
+  digitalWrite(ENA, LOW);
+  digitalWrite(ENB, LOW);
+
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
+}</pre>
+</div>
+</div>
+</section>
+
+<section class="section dark-section" id="team">
+<div class="container reveal">
+<div class="section-heading">
+<div class="eyebrow">10 / OUR TEAM</div>
+<h2>PROJECT <span class="orange">TEAM</span></h2>
+<p>Group No. 03</p>
+</div>
+<div class="team">
+<div class="person">
+<div class="avatar">👨‍🎓</div>
+<h3>Vaibhav Ghare</h3>
+<p>Team Member</p>
+</div>
+<div class="person">
+<div class="avatar">👨‍🎓</div>
+<h3>Group Member 02</h3>
+<p>Team Member</p>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+<p>🔥 FIRETECH | Fire Fighting Robot | Group No. 03</p>
+<p>Engineering Project Website</p>
+<p>© 2026 All Rights Reserved</p>
+</div>
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+  });
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".reveal").forEach(el => {
+  observer.observe(el);
+});
+
+function copyCode() {
+  const code = document.getElementById("arduinoCode").innerText;
+  navigator.clipboard.writeText(code).then(() => {
+    alert("Arduino code copied!");
+  }).catch(() => {
+    alert("Please select and copy the code manually.");
+  });
+}
+</script>
+
+</body>
+</html>
