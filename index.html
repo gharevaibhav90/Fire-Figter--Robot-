@@ -15,13 +15,6 @@
     scroll-behavior: smooth;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #080b12;
-    color: #f5f5f5;
-    line-height: 1.7;
-}
-
 :root {
     --orange: #ff6b00;
     --dark: #080b12;
@@ -29,11 +22,18 @@ body {
     --muted: #aab2c0;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background: var(--dark);
+    color: #f5f5f5;
+    line-height: 1.7;
+}
+
 nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(8,11,18,0.96);
+    background: rgba(8,11,18,.97);
     border-bottom: 1px solid #252b38;
     padding: 15px 6%;
     display: flex;
@@ -69,6 +69,7 @@ nav {
     color: white;
     border: none;
     font-size: 27px;
+    cursor: pointer;
 }
 
 .hero {
@@ -97,7 +98,9 @@ nav {
     margin: 20px 0;
 }
 
-.hero h1 span {
+.hero h1 span,
+.section-title span,
+footer span {
     color: var(--orange);
 }
 
@@ -128,10 +131,6 @@ section {
 
 .section-title h2 {
     font-size: 34px;
-}
-
-.section-title span {
-    color: var(--orange);
 }
 
 .section-title p {
@@ -176,12 +175,9 @@ section {
     margin-bottom: 10px;
 }
 
-.card p, .card li {
+.card p,
+.card li {
     color: var(--muted);
-}
-
-.card ul {
-    padding-left: 20px;
 }
 
 .alt {
@@ -285,10 +281,6 @@ footer {
     border-top: 1px solid #252b38;
 }
 
-footer span {
-    color: var(--orange);
-}
-
 @media(max-width:850px) {
     .menu-btn {
         display: block;
@@ -324,6 +316,7 @@ footer span {
 
 <body>
 
+<!-- NAVIGATION -->
 <nav>
     <div class="logo">FIRETECH.</div>
 
@@ -334,6 +327,7 @@ footer span {
         <a href="#about">About</a>
         <a href="#objectives">Objectives</a>
         <a href="#components">Components</a>
+        <a href="#software">Software</a>
         <a href="#working">Working</a>
         <a href="#circuit">Circuit Diagram</a>
         <a href="#code">Arduino Code</a>
@@ -393,14 +387,17 @@ footer span {
             <h3>01. Fire Detection</h3>
             <p>To detect flame using flame sensors.</p>
         </div>
+
         <div class="card">
             <h3>02. Automation</h3>
             <p>To control robot movement automatically using Arduino.</p>
         </div>
+
         <div class="card">
             <h3>03. Safety</h3>
             <p>To demonstrate a remote-free robotic response concept.</p>
         </div>
+
         <div class="card">
             <h3>04. Learning</h3>
             <p>To understand robotics, sensors and embedded systems.</p>
@@ -420,30 +417,37 @@ footer span {
             <h3>Arduino Uno</h3>
             <p>Main controller that processes sensor inputs and controls the robot.</p>
         </div>
+
         <div class="card">
             <h3>Flame Sensors</h3>
             <p>Detect flame and provide signals to the Arduino.</p>
         </div>
+
         <div class="card">
             <h3>TT DC Motors</h3>
             <p>Provide movement to the robot.</p>
         </div>
+
         <div class="card">
             <h3>L298N Driver</h3>
             <p>Controls the direction and speed of DC motors.</p>
         </div>
+
         <div class="card">
             <h3>Servo Motor</h3>
             <p>Moves the water nozzle in the required direction.</p>
         </div>
+
         <div class="card">
             <h3>Mini Water Pump</h3>
             <p>Used to deliver water through the nozzle.</p>
         </div>
+
         <div class="card">
             <h3>Robot Chassis</h3>
             <p>Supports the electronic and mechanical components.</p>
         </div>
+
         <div class="card">
             <h3>Battery Supply</h3>
             <p>Provides suitable power to the robot system.</p>
@@ -462,10 +466,12 @@ footer span {
             <h3>Arduino IDE</h3>
             <p>Used to write, compile and upload the program to Arduino Uno.</p>
         </div>
+
         <div class="card">
             <h3>SolidWorks</h3>
             <p>Used for mechanical design and 3D modelling of robot parts.</p>
         </div>
+
         <div class="card">
             <h3>Embedded C / C++</h3>
             <p>Programming language used to control the robot.</p>
@@ -473,7 +479,7 @@ footer span {
     </div>
 </section>
 
-<!-- WORKING -->
+<!-- WORKING PRINCIPLE -->
 <section id="working">
     <div class="section-title">
         <h2>Working <span>Principle</span></h2>
@@ -485,22 +491,27 @@ footer span {
             <h3>Step 1 – Flame Detection</h3>
             <p>Flame sensors detect the presence of a flame.</p>
         </div>
+
         <div class="step">
             <h3>Step 2 – Signal Processing</h3>
             <p>Arduino receives the sensor signals and processes them.</p>
         </div>
+
         <div class="step">
             <h3>Step 3 – Robot Movement</h3>
             <p>The motor driver controls the robot motors according to the sensor readings.</p>
         </div>
+
         <div class="step">
             <h3>Step 4 – Robot Stops</h3>
             <p>When the flame is detected, the robot stops its movement.</p>
         </div>
+
         <div class="step">
             <h3>Step 5 – Nozzle Positioning</h3>
             <p>The servo motor positions the water nozzle.</p>
         </div>
+
         <div class="step">
             <h3>Step 6 – Water Pump</h3>
             <p>The pump control system is activated to deliver water.</p>
@@ -517,6 +528,7 @@ footer span {
 
     <div class="diagram-box">
         <svg viewBox="0 0 900 570" xmlns="http://www.w3.org/2000/svg">
+
             <defs>
                 <marker id="arrow" markerWidth="8" markerHeight="8"
                 refX="6" refY="3" orient="auto">
@@ -526,45 +538,81 @@ footer span {
 
             <rect x="330" y="190" width="240" height="150"
             rx="12" fill="#1664a5"/>
+
             <text x="450" y="250" text-anchor="middle"
-            fill="white" font-size="25" font-weight="bold">ARDUINO UNO</text>
+            fill="white" font-size="25" font-weight="bold">
+                ARDUINO UNO
+            </text>
+
             <text x="450" y="280" text-anchor="middle"
-            fill="white" font-size="16">Main Controller</text>
+            fill="white" font-size="16">
+                Main Controller
+            </text>
 
             <rect x="25" y="45" width="200" height="90"
             rx="10" fill="#f0a000"/>
+
             <text x="125" y="82" text-anchor="middle"
-            font-size="19" font-weight="bold" fill="#111">LEFT FLAME</text>
+            font-size="19" font-weight="bold" fill="#111">
+                LEFT FLAME
+            </text>
+
             <text x="125" y="108" text-anchor="middle"
-            font-size="16" fill="#111">Sensor</text>
+            font-size="16" fill="#111">
+                Sensor
+            </text>
 
             <rect x="675" y="45" width="200" height="90"
             rx="10" fill="#f0a000"/>
+
             <text x="775" y="82" text-anchor="middle"
-            font-size="19" font-weight="bold" fill="#111">RIGHT FLAME</text>
+            font-size="19" font-weight="bold" fill="#111">
+                RIGHT FLAME
+            </text>
+
             <text x="775" y="108" text-anchor="middle"
-            font-size="16" fill="#111">Sensor</text>
+            font-size="16" fill="#111">
+                Sensor
+            </text>
 
             <rect x="25" y="400" width="200" height="100"
             rx="10" fill="#444"/>
+
             <text x="125" y="440" text-anchor="middle"
-            fill="white" font-size="19">L298N DRIVER</text>
+            fill="white" font-size="19">
+                L298N DRIVER
+            </text>
+
             <text x="125" y="468" text-anchor="middle"
-            fill="white" font-size="15">DC Motor Control</text>
+            fill="white" font-size="15">
+                DC Motor Control
+            </text>
 
             <rect x="675" y="400" width="200" height="100"
             rx="10" fill="#16865c"/>
+
             <text x="775" y="440" text-anchor="middle"
-            fill="white" font-size="19">SERVO MOTOR</text>
+            fill="white" font-size="19">
+                SERVO MOTOR
+            </text>
+
             <text x="775" y="468" text-anchor="middle"
-            fill="white" font-size="15">Nozzle Control</text>
+            fill="white" font-size="15">
+                Nozzle Control
+            </text>
 
             <rect x="350" y="425" width="200" height="95"
             rx="10" fill="#b64a20"/>
+
             <text x="450" y="462" text-anchor="middle"
-            fill="white" font-size="19">PUMP DRIVER</text>
+            fill="white" font-size="19">
+                PUMP DRIVER
+            </text>
+
             <text x="450" y="490" text-anchor="middle"
-            fill="white" font-size="15">External Supply</text>
+            fill="white" font-size="15">
+                External Supply
+            </text>
 
             <g stroke="#333" stroke-width="3" fill="none"
             marker-end="url(#arrow)">
@@ -576,7 +624,10 @@ footer span {
             </g>
 
             <text x="450" y="25" text-anchor="middle"
-            font-size="17" fill="#111">SIGNAL CONNECTIONS</text>
+            font-size="17" fill="#111">
+                SIGNAL CONNECTIONS
+            </text>
+
         </svg>
     </div>
 
@@ -598,7 +649,9 @@ footer span {
     <div class="code-window">
         <div class="code-header">
             <span>FireFightingRobot.ino</span>
-            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            <button class="copy-btn" onclick="copyCode()">
+                Copy Code
+            </button>
         </div>
 
 <pre id="arduinoCode">#include &lt;Servo.h&gt;
@@ -710,6 +763,7 @@ void loop() {
     </div>
 
     <div class="grid">
+
         <div class="card team-card">
             <div class="team-icon">👨‍🎓</div>
             <h3>Vaibhav Ghare</h3>
@@ -721,9 +775,11 @@ void loop() {
             <h3>Krushna Fapale</h3>
             <p>Project Team Member</p>
         </div>
+
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2026 <span>FIRETECH</span> | Fire Fighting Robot</p>
     <p>Designed by Project Group 03</p>
@@ -746,6 +802,7 @@ function copyCode() {
     navigator.clipboard.writeText(code).then(() => {
         const button = document.querySelector(".copy-btn");
         button.innerText = "Copied!";
+
         setTimeout(() => {
             button.innerText = "Copy Code";
         }, 2000);
